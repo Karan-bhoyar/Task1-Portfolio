@@ -1,60 +1,340 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karan Bhoyar | Creative Developer</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-  <style>body { box-sizing: border-box; }</style>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body><!-- Animated Background -->
-  <div class="bg-animation"></div><!-- Navigation -->
-  <nav class="navbar" id="navbar">
-   <div class="nav-container"><a href="#" class="logo">Portfolio</a>
-    <ul class="nav-menu" id="navMenu">
-     <li><a href="#hero" class="nav-link">Home</a></li>
-     <li><a href="#about" class="nav-link">About</a></li>
-     <li><a href="#skills" class="nav-link">Skills</a></li>
-     <li><a href="#projects" class="nav-link">Projects</a></li>
-     <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-     <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme"></div>
-     <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle menu"><span></span> <span></span> <span></span>
-     </div>
-    </div>
-   </div>
-  </nav><!-- Hero Section -->
-  <header class="hero" id="hero">
-   <div class="hero-container">
-    <div class="hero-content">
-  
-     <h1 class="hero-title">Hi, I'm<br><span class="hero-name" id="heroName">Karan Bhoyar</span></h1>
-     <div class="typing-wrapper"><span class="typing-text" id="typingText"></span> <span class="typing-cursor"></span>
-     </div>
-     <p class="hero-description">A passionate full-stack developer crafting beautiful, functional digital experiences. I transform ideas into elegant solutions that make a difference.</p>
-     <div class="hero-buttons"><a href="#projects" class="btn btn-primary"> <span>View My Work</span> <span>→</span> </a> <a href="#contact" class="btn btn-secondary"> <span>Get In Touch</span> </a>
-     </div>
-    </div>
-    <div class="hero-visual">
-     <div class="profile-container">
-      <div class="profile-ring"></div>
-      <div class="profile-image">
-       👨‍💻
-      </div>
-      
-      </div>
-     </div>
-    </div>
-   </div>
-  </header><!-- About Section -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan - Full Stack Developer | Portfolio V2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <script src="javascript.js"></script>  
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cee0170170f3501',t:'MTc3MTI1NDk4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme"></div>
+                <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                
+                <h1 class="hero-title">Hi, I'm<br><span class="hero-name">Karan Bhoyar</span></h1>
+                <div class="typing-wrapper">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor"></span>
+                </div>
+                <p class="hero-description">Architecting exceptional digital experiences with cutting-edge technologies. I transform ambitious ideas into scalable, user-centric solutions that drive real business impact.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary btn-large">
+                        <span>Explore My Work</span>
+                        <span>→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-large">
+                        <span>Start a Project</span>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-ring"></div>
+                    <div class="profile-image">👨‍💻</div>
+                   
+                </div>
+            </div>
+        </div>
+     
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about creating impactful digital solutions</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image reveal">
+                 <div class="about-img-placeholder">
+                 <img src="ii.jpeg" alt="Karan Bhoyar">
+                </div>
+
+                    <div class="experience-badge">
+                        <div class="number">1+</div>
+                        <div class="text">Years Experience</div>
+                    </div>
+                </div>
+                <div class="about-content reveal">
+                    <h3>Turning Vision Into Digital Reality</h3>
+                    <p>I’m Karan Bhoyar, a passionate Full Stack Developer and final-year engineering student, dedicated to building modern, scalable, and user-friendly digital solutions. I specialize in developing responsive web applications and transforming ideas into real-world, impactful products through clean code and innovative design.</p>
+                    <p>My journey in technology started with curiosity about how digital systems work. Today, I apply strong technical skills and creative problem-solving to build efficient and impactful solutions. Beyond coding, I enjoy learning new technologies, working on real-world projects, and continuously improving my development skills.</p>
+                    <div class="about-tabs">
+                        <button class="tab-btn active" data-tab="journey">Journey</button>
+                        <button class="tab-btn" data-tab="philosophy">Philosophy</button>
+                        <button class="tab-btn" data-tab="interests">Interests</button>
+                    </div>
+                    <div class="tab-content active" id="journey">
+                        <p>Started my development journey in 2022, building strong skills in full stack web development. Later, worked as a Full Stack Web Developer Intern at Z Intech Pvt. Ltd. (Oct 2025 – Dec 2025, Wardha – Remote), where I developed scalable, responsive, and user-focused web applications.</p>
+                    </div>
+                    <div class="tab-content" id="philosophy">
+                        <p>I believe in clean code, user-first design, and continuous learning. Every project is an opportunity to deliver excellence and build lasting relationships with clients.</p>
+                    </div>
+                    <div class="tab-content" id="interests">
+                        <p>Beyond coding, I'm passionate about open source, mentoring junior developers, and exploring emerging technologies like AI and blockchain.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Awards Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technologies I work with to bring ideas to life</p>
+            </div>
+            <div class="skills-container">
+                <!-- Frontend Skills -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 & CSS3</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript / TypeScript</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React / Vue.js</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Next.js / Angular</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">⚙️</div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js / Express</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"> Springboot</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL / MongoDB</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">GraphQL / REST APIs</span>
+                                <span class="skill-percent">87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="87"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Roles that shaped my career</p>
+            </div>
+           <div class="experience-timeline">
+    <div class="timeline-item reveal">
+        <div class="timeline-marker"></div>
+
+        <div class="timeline-content">
+            <h4>Women Safety Web Application</h4>
+            <p class="timeline-company">Personal Project • 2025</p>
+
+            <p class="timeline-description">
+                Developed a Women Safety web application providing emergency support concepts,
+                safety awareness features, and responsive user interface for accessibility
+                across devices.
+            </p>
+
+         <div class="timeline-tags">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Responsive Design</span>
+    <span>Java Backend</span>
+    <span>MongoDB</span>
+    <span>REST API</span>
+    <span>Admin Dashboard</span>
+    <span>Authentication</span>
+</div>
+
+
+            <!-- Links -->
+            <div class="project-links">
+                <a href="https://github.com/Karan-bhoyar/WomenSafety"
+                   target="_blank"
+                   class="project-btn github-btn">
+                   GitHub Code
+                </a>
+
+                <a href="https://womensafety1.vercel.app/"
+                   target="_blank"
+                   class="project-btn live-btn">
+                   Live Demo
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div> <br> <br>
+
+             <div class="experience-timeline">
+    <div class="timeline-item reveal">
+        <div class="timeline-marker"></div>
+
+        <div class="timeline-content">
+            <h4>Startup Pitching Portal</h4>
+            <p class="timeline-company">Personal Project • 2025</p>
+
+            <p class="timeline-description">
+              Developed a startup pitching portal that allows entrepreneurs to showcase their startup ideas, upload project details, and connect with potential investors. The platform helps founders present their vision, business model, and growth strategy in a structured digital format.
+            </p>
+
+            <div class="timeline-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                 <span>MongoDB Database</span>
+                 <span>REST API Development</span>
+                 <span>Admin Dashboard</span>
+                 <span>Authentication</span>
+            </div>
+
+            <!-- Links -->
+            <div class="project-links">
+                <a href="https://github.com/Karan-bhoyar/Startup-Project"
+                   target="_blank"
+                   class="project-btn github-btn">
+                   GitHub Code
+                </a>
+
+                <a href="https://startups5.netlify.app/"
+                   target="_blank"
+                   class="project-btn live-btn">
+                   Live Demo
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+  
+
+    <script src="javascript.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cf4c4d396e68826',t:'MTc3MTMyNTg5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
