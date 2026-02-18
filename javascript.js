@@ -17,107 +17,11 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
-/* ==================== PROJECT DATA ==================== */
-const projectsData = {
-    1: {
-        icon: '🛒',
-        tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-        title: 'E-Commerce Platform',
-        description: 'A comprehensive e-commerce solution featuring real-time inventory management, secure payment processing with Stripe, user authentication, and a powerful admin dashboard. Built with scalability in mind to handle thousands of products and concurrent users.',
-        features: [
-            'Real-time inventory tracking',
-            'Secure payment processing',
-            'Admin dashboard with analytics',
-            'User reviews and ratings',
-            'Wishlist and cart functionality',
-            'Order tracking system'
-        ]
-    },
-    2: {
-        icon: '📊',
-        tags: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
-        title: 'Analytics Dashboard',
-        description: 'An interactive data visualization platform that transforms complex data into actionable insights. Features customizable dashboards, real-time data streaming, and automated reporting capabilities for business intelligence.',
-        features: [
-            'Interactive data visualizations',
-            'Real-time data streaming',
-            'Customizable dashboards',
-            'Automated report generation',
-            'Multi-user collaboration',
-            'Export to PDF/Excel'
-        ]
-    },
-    3: {
-        icon: '💬',
-        tags: ['React Native', 'Firebase', 'WebRTC', 'Node.js'],
-        title: 'Chat Application',
-        description: 'A feature-rich messaging application with video calling capabilities, file sharing, and end-to-end encryption. Supports both iOS and Android platforms with a consistent user experience across devices.',
-        features: [
-            'End-to-end encryption',
-            'Video and voice calls',
-            'File and media sharing',
-            'Group chat support',
-            'Push notifications',
-            'Message search and history'
-        ]
-    },
-    4: {
-        icon: '✨',
-        tags: ['Next.js', 'Stripe', 'Prisma', 'OpenAI'],
-        title: 'AI Content Generator',
-        description: 'A SaaS platform for AI-powered content creation with subscription management and credits system. Generates high-quality marketing content, blog posts, and social media captions using advanced AI models.',
-        features: [
-            'AI-powered content generation',
-            'Subscription management',
-            'Credits/usage tracking',
-            'Template library',
-            'Bulk export capabilities',
-            'API access for integrations'
-        ]
-    }
-};
+
 
 /* ==================== TYPING ANIMATION ==================== */
-const typingStrings = [
-    'Full Stack Developer',
-    'UI/UX Enthusiast',
-    'Problem Solver',
-    'Creative Thinker',
-    'Code Craftsman'
-];
+/* ==================== TYPING ANIMATION ==================== */
 
-let stringIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeWriter() {
-    const currentString = typingStrings[stringIndex];
-
-    if (!isDeleting) {
-        typingText.textContent = currentString.substring(0, charIndex + 1);
-        charIndex++;
-    } else {
-        typingText.textContent = currentString.substring(0, charIndex - 1);
-        charIndex--;
-    }
-
-    let typingSpeed = isDeleting ? 50 : 100;
-
-    if (!isDeleting && charIndex === currentString.length) {
-        typingSpeed = 1500;
-        isDeleting = true;
-    }
-
-    if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        stringIndex = (stringIndex + 1) % typingStrings.length;
-        typingSpeed = 500;
-    }
-
-    setTimeout(typeWriter, typingSpeed);
-}
-
-setTimeout(typeWriter, 800);
 
 
 /* ==================== MOBILE MENU TOGGLE ==================== */
@@ -331,12 +235,70 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Alex_Morgan_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+/* ==================== FORM VALIDATION ==================== */
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function validateField(field) {
+    const value = field.value.trim();
+    const formGroup = field.parentElement;
+    
+    if (field.type === 'email') {
+        if (!value || !validateEmail(value)) {
+            formGroup.classList.add('error');
+            return false;
+        }
+    } else {
+        if (!value) {
+            formGroup.classList.add('error');
+            return false;
+        }
+    }
+    
+    formGroup.classList.remove('error');
+    return true;
+}
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const subject = document.getElementById('subject');
+    const message = document.getElementById('message');
+    
+    let isValid = true;
+    
+    if (!validateField(name)) isValid = false;
+    if (!validateField(email)) isValid = false;
+    if (!validateField(subject)) isValid = false;
+    if (!validateField(message)) isValid = false;
+    
+    if (isValid) {
+        formSuccess.classList.add('show');
+        contactForm.reset();
+        
+        setTimeout(() => {
+            formSuccess.classList.remove('show');
+        }, 5000);
+    }
+});
+
+const formInputs = contactForm.querySelectorAll('.form-input, .form-textarea');
+formInputs.forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    
+    input.addEventListener('input', () => {
+        if (input.parentElement.classList.contains('error')) {
+            validateField(input);
+        }
+    });
+});
+
+
+
+
+
+
